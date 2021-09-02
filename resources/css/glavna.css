@@ -1,0 +1,6 @@
+#mniNew > .label{
+    -fx-graphic: url("/img/Screenshot_2.png");
+}
+#mniNew .accelerator-text{
+    -fx-graphic: none;
+}
