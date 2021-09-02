@@ -2,9 +2,13 @@ package ba.unsa.etf.rpr;
 
 import com.sun.glass.ui.CommonDialogs;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,5 +38,14 @@ public class Controller {
             alert.setTitle("Ne mogu da otvorim datoteku");
             alert.showAndWait();
         }
+    }
+
+    public void openNewWindow(ActionEvent actionEvent) throws IOException {
+        Stage stage=new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/properties.fxml"));
+        stage.setTitle("Properties");
+        stage.setScene(new Scene(root, 600, 550));
+        stage.setResizable(false);
+        stage.show();
     }
 }

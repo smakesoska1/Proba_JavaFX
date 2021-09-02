@@ -58,7 +58,7 @@
                         <Separator orientation="VERTICAL" />
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#openNewWindow" text="Button" />
               </items>
             </ToolBar>
          </children>
